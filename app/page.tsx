@@ -26,13 +26,13 @@ export default function HomePage() {
       {/* <About /> */}
       <HowItWorks />
       <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
+      {/* <Services /> */}
+      {/* <Cta /> */}
+      {/* <Testimonials /> */}
       <Team />
-      <Pricing />
+      {/* <Pricing /> */}
       <Newsletter />
-      <FAQ />
+      {/* <FAQ /> */}
       <Footer />
       <ScrollToTop />
     </>

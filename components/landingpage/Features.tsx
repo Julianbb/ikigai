@@ -1,103 +1,41 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Image from 'next/image';
-
-import image from "./assets/growth.png";
-import image3 from "./assets/reflecting.png";
-import image4 from "./assets/looking-ahead.png";
-
-interface FeatureProps {
-  title: string;
-  description: string;
-  image: string;
-}
-
-const features: FeatureProps[] = [
-  {
-    title: "Responsive Design",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4.src,
-  },
-  {
-    title: "Intuitive user interface",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image3.src,
-  },
-  {
-    title: "AI-Powered insights",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image.src,
-  },
-];
-
-const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
-];
+import Image from "next/image";
 
 export const Features = () => {
   return (
-    <section
-      id="case_studies"
-      className="container py-24 sm:py-32 space-y-8"
-    >
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
-        </span>
+    <section id="case_studies" className="container py-24 sm:py-32 space-y-12">
+      {/* 标题 */}
+      <h2 className="text-3xl lg:text-4xl font-bold text-center">
+        CASE STUDIES
       </h2>
 
-      <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
-              {feature}
-            </Badge>
+      {/* 图片网格 */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          "/images/case1.jpg",
+          "/images/case2.jpg",
+          "/images/case3.jpg",
+          "/images/case4.jpg",
+          "/images/case5.jpg",
+          "/images/case6.jpg",
+        ].map((src, i) => (
+          <div
+            key={i}
+            className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg"
+          >
+            <Image
+              src={src}
+              alt={`Case Study ${i + 1}`}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-300"
+            />
           </div>
         ))}
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <Image
-                src={image}
-                alt="About feature"
-                width={300}
-                height={200}
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+      {/* 底部描述 */}
+      <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+        Quản trị nhân sự kiểu mới – thông minh, linh hoạt, không cồng kềnh.
+      </p>
     </section>
   );
 };
