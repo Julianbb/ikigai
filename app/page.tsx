@@ -23,7 +23,7 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Sponsors />
-      <About />
+      {/* <About /> */}
       <HowItWorks />
       <Features />
       <Services />

@@ -1,58 +1,47 @@
-import { Button,buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
-        <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
-            </span>{" "}
-            landing page
-          </h1>{" "}
-          for{" "}
-          <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              React
-            </span>{" "}
-            developers
-          </h2>
-        </main>
+    <section className="relative w-full min-h-screen flex items-center justify-center py-16 px-6 md:py-24 md:px-12 overflow-hidden">
+      {/* 背景图片层 */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/images/background.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          filter: "blur(3px)",
+        }}
+      ></div>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Build your React landing page effortlessly with the required sections
-          to your project.
+      {/* 背景遮罩层 */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* 内容区域 */}
+      <div className="relative z-10 w-full text-center text-white space-y-8">
+     
+
+        {/* 副标题 / 公司名 */}
+        <h2 className="text-2xl md:text-4xl font-semibold max-w-5xl mx-auto leading-snug">
+          WELCOME TO IKIGAI CAPABILITY TRAINING AND CONSULTING COMPANY LIMITED
+        </h2>
+
+           {/* 大标题 IKIGAI */}
+           <h1 className="text-6xl md:text-8xl font-extrabold tracking-wide drop-shadow-lg">
+          IKIGAI
+        </h1>
+
+        {/* 介绍文本 */}
+        <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+          Tầm nhìn của chúng tôi là kiến tạo nguồn lực thành lợi thế cạnh tranh bền vững.
+          <br />
+          Sứ mệnh của chúng tôi là biến nguồn lực thành giá trị chiến lược thông qua đào tạo và tư vấn.
         </p>
-
-        <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link href="/dashboard" >
-          <Button className="w-full md:w-1/3 "> Get Started</Button>
-          </Link>
-
-          <a
-            rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
-            target="_blank"
-            className={`w-full md:w-1/3 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            Github Repository
-            <GitHubLogoIcon className="ml-2 size-5" />
-          </a>
-        </div>
       </div>
-
-      {/* Hero cards sections */}
-      <div className="z-10">
-        <HeroCards />
-      </div>
-
-      {/* Shadow effect */}
-      <div className="shadow"></div>
     </section>
   );
 };

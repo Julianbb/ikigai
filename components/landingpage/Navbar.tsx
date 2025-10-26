@@ -28,7 +28,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#home",
+    href: "#",
     label: "HOME",
   },
   {
@@ -54,14 +54,14 @@ export const Navbar = () => {
   return (
     <header className="sticky border-b top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container h-20 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-            <Image src="/images/logo.jpg" alt="logo" width={100} height={100} />
+            <Image src="/images/logo.jpg" alt="logo" width={200} height={200} />
             </a>
           </NavigationMenuItem>
 
