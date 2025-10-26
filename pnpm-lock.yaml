@@ -95,6 +95,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.17)
+  tailwindcss-safe-area:
+    specifier: ^1.1.0
+    version: 1.1.0(tailwindcss@3.4.17)
 
 devDependencies:
   '@biomejs/biome':
@@ -4455,6 +4458,15 @@ packages:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      tailwindcss: 3.4.17
+    dev: false
+
+  /tailwindcss-safe-area@1.1.0(tailwindcss@3.4.17):
+    resolution: {integrity: sha512-wuPUeW5BhWNv9yr3OzaGgpqImQG9FBM4mQIQh2C6yjHmOOZsJ3gh5RfNHt+TM16TMtpQs/8k2TWx8yQTFG7Fcw==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      tailwindcss: ^4.0.0
     dependencies:
       tailwindcss: 3.4.17
     dev: false

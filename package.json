@@ -39,7 +39,8 @@
     "react-dom": "19.0.0-rc-45804af1-20241021",
     "sonner": "^2.0.7",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-safe-area": "^1.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
