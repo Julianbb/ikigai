@@ -93,10 +93,8 @@ export const HowItWorks = () => {
 
   return (
     <section id="products" className="container text-center py-24 sm:py-32">
-      <h2 className="text-3xl md:text-4xl font-bold mb-6">Products</h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-10 text-xl text-muted-foreground">
-        Choose a category to explore our tailored solutions and case examples.
-      </p>
+      <h2 className="text-3xl md:text-4xl font-bold mb-6">PRODUCTS</h2>
+   
 
       {/* 切换按钮 */}
       <div className="flex justify-center gap-4 mb-12 flex-wrap">

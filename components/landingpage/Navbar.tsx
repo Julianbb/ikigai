@@ -67,7 +67,7 @@ export const Navbar = () => {
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
 
             <Sheet
               open={isOpen}
@@ -106,7 +106,7 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-          <ModeToggle />
+          {/* <ModeToggle /> */}
             {routeList.map((route: RouteProps, i) => (
               <a
                 rel="noreferrer noopener"

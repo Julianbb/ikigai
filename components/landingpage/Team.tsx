@@ -1,177 +1,115 @@
-import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
-import Image from 'next/image';
-
+import Image from "next/image";
 
 interface TeamProps {
   imageUrl: string;
   name: string;
   position: string;
-  socialNetworks: SociaNetworkslProps[];
-}
-
-interface SociaNetworkslProps {
-  name: string;
-  url: string;
+  description: string;
 }
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
+    imageUrl: "/images/team1.jpg",
+    name: "MR. DƯƠNG BÁ HẢI",
+    position: "HR Consultant - Facilitator - Coach",
+    description:
+      "Hải có hơn 20 năm kinh nghiệm trong phát triển tổ chức và cải tiến doanh nghiệp tại các tập đoàn đa quốc gia Mỹ, Nhật, Hàn, Úc và Đức. Với đam mê và tinh thần cam kết, anh đồng hành cùng khách hàng trong vai trò giảng viên, tư vấn và khai vấn — mang đến năng lượng nhiệt thành, thực tiễn và truyền cảm hứng phát triển bền vững.",
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
+    imageUrl: "/images/team2.jpg",
+    name: "Ms. Huỳnh Hà Kỳ An",
+    position: "Learning Partner",
+    description:
+      "Đặt lịch tư vấn miễn phí để thảo luận về nhu cầu và thách thức cụ thể của bạn.",
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-    ],
+    imageUrl: "/images/team3.jpg",
+    name: "Ms. Lương Quỳnh Như",
+    position: "Learning Partner",
+    description:
+      "Trao đổi để khám phá giải pháp phù hợp và định hướng phát triển cho doanh nghiệp bạn.",
   },
 ];
 
 export const Team = () => {
-  const socialIcon = (iconName: string) => {
-    switch (iconName) {
-      case "Linkedin":
-        return <Linkedin size="20" />;
-
-      case "Facebook":
-        return <Facebook size="20" />;
-
-      case "Instagram":
-        return <Instagram size="20" />;
-    }
-  };
-
   return (
-    <section
-      id="team"
-      className="container py-24 sm:py-32"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold">
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
-        </span>
-        Crew
+    <section id="team" className="container py-24 sm:py-32">
+      {/* 标题居中 */}
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        TEAM
       </h2>
 
-      <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-center">
+        {/* 上方大卡 - 不改 */}
+        <div className="lg:col-span-2 flex justify-center">
+          <Card className="flex flex-col justify-center items-center bg-transparent border-0 shadow-none max-w-5xl">
+            <CardHeader className="flex flex-col justify-center items-center pb-1">
+              <Image
+                src={teamList[0].imageUrl}
+                alt={`${teamList[0].name} ${teamList[0].position}`}
+                width={250}
+                height={250}
+                className=" object-cover "
+              />
+              <CardTitle className="text-center mt-4">
+                {teamList[0].name}
+              </CardTitle>
+              <CardDescription className="text-primary text-center">
+                {teamList[0].position}
+              </CardDescription>
+            </CardHeader>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
-        {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
-            <Card
-              key={name}
-              className="bg-muted/50 relative mt-8 flex flex-col justify-center items-center"
-            >
-              <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <Image
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
-                  width={96}
-                  height={96}
-                  className="absolute -top-12 rounded-full size-24 aspect-square object-cover"
-                />
-                <CardTitle className="text-center">{name}</CardTitle>
-                <CardDescription className="text-primary">
-                  {position}
-                </CardDescription>
-              </CardHeader>
+            <CardContent className="text-center pb-6 px-6">
+              <p>{teamList[0].description}</p>
+            </CardContent>
+          </Card>
+        </div>
 
-              <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </CardContent>
+        {teamList.slice(1).map(
+  ({ imageUrl, name, position, description }: TeamProps) => (
+    <div key={name} className="flex justify-center">
+      <Card className="flex flex-col sm:flex-row items-center bg-transparent border-0 shadow-none w-full max-w-[400px]">
+        {/* 左侧头像 */}
+        <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4 flex justify-center">
+          <div className="w-[90px] h-[90px] rounded-full overflow-hidden flex justify-center items-center shadow-md">
+            <Image
+              src={imageUrl}
+              alt={`${name} ${position}`}
+              width={90}
+              height={90}
+              className="object-cover w-full h-full"
+            />
+          </div>
+        </div>
 
-              <CardFooter>
-                {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (
-                  <div key={name}>
-                    <a
-                      rel="noreferrer noopener"
-                      href={url}
-                      target="_blank"
-                      className={buttonVariants({
-                        variant: "ghost",
-                        size: "sm",
-                      })}
-                    >
-                      <span className="sr-only">{name} icon</span>
-                      {socialIcon(name)}
-                    </a>
-                  </div>
-                ))}
-              </CardFooter>
-            </Card>
-          )
-        )}
+        {/* 右侧文字部分 */}
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+          <CardHeader className="p-0">
+            <CardTitle className="text-base font-semibold">
+              {name}
+            </CardTitle>
+            <CardDescription className="text-primary">
+              {position}
+            </CardDescription>
+          </CardHeader>
+
+          {/* 描述 */}
+          <CardContent className="p-0 mt-3">
+            <p className="text-sm">{description}</p>
+          </CardContent>
+        </div>
+      </Card>
+    </div>
+  )
+)}
+
       </div>
     </section>
   );

@@ -61,7 +61,8 @@ export default function RootLayout({
 
       </head>
       <body className="antialiased bg-white">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+
           <Toaster position="top-center" />
   
            

@@ -8,10 +8,10 @@ import { Footer } from "@/components/landingpage/Footer";
 import { Hero } from "@/components/landingpage/Hero";
 import { HowItWorks } from "@/components/landingpage/HowItWorks";
 import { Navbar } from "@/components/landingpage/Navbar";
-import { Newsletter } from "@/components/landingpage/Newsletter";
+import { Contact } from "@/components/landingpage/Contact";
 import { Pricing } from "@/components/landingpage/Pricing";
 import { ScrollToTop } from "@/components/landingpage/ScrollToTop";
-import { Services } from "@/components/landingpage/Services";
+import { Customer } from "@/components/landingpage/Customer";
 import { Sponsors } from "@/components/landingpage/Sponsors";
 import { Team } from "@/components/landingpage/Team";
 import { Testimonials } from "@/components/landingpage/Testimonials";
@@ -23,15 +23,15 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Sponsors />
-      {/* <About /> */}
+      <About />
       <HowItWorks />
       <Features />
-      {/* <Services /> */}
+      <Customer />
       {/* <Cta /> */}
       {/* <Testimonials /> */}
       <Team />
       {/* <Pricing /> */}
-      <Newsletter />
+      <Contact />
       {/* <FAQ /> */}
       <Footer />
       <ScrollToTop />
