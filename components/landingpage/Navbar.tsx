@@ -19,6 +19,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
 import { LogoIcon } from "./Icons";
+import Image from "next/image";
 
 interface RouteProps {
   href: string;
@@ -27,20 +28,24 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: "#home",
+    label: "HOME",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#products",
+    label: "PRODUCTS",
   },
   {
-    href: "#pricing",
-    label: "Pricing",
+    href: "#case_studies",
+    label: "CASE STUDIES",
   },
   {
-    href: "#faq",
-    label: "FAQ",
+    href: "#team",
+    label: "TEAM",
+  },
+  {
+    href: "#contact",
+    label: "CONTACT",
   },
 ];
 
@@ -56,8 +61,7 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
-              ShadcnUI/React
+            <Image src="/images/logo.jpg" alt="logo" width={100} height={100} />
             </a>
           </NavigationMenuItem>
 

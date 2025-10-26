@@ -10,7 +10,7 @@ export const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter">
+    <section id="contact">
       <hr className="w-11/12 mx-auto" />
 
       <div className="container py-24 sm:py-32">
