@@ -106,6 +106,7 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
+          <ModeToggle />
             {routeList.map((route: RouteProps, i) => (
               <a
                 rel="noreferrer noopener"
