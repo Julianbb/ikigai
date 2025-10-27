@@ -152,7 +152,7 @@ export const Footer = () => {
 
       <section className="container pb-14 text-center">
         <h3>
-          &copy; 2025 IKIGAI CAPABILITY TRAINING AND CONSULTING COMPANY LIMITED
+          &copy; 2025 ikigaihr.com.vn
         </h3>
       </section>
     </footer>

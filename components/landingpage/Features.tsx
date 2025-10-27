@@ -33,7 +33,7 @@ export const Features = () => {
       </div>
 
       {/* 底部描述 */}
-      <p className="text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+      <p className="text-center text-lg text-blue-900 max-w-2xl mx-auto font-bold">
         Quản trị nhân sự kiểu mới – thông minh, linh hoạt, không cồng kềnh.
       </p>
     </section>
