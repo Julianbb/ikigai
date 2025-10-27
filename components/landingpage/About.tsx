@@ -14,14 +14,14 @@ export const About = () => {
 
       <div className="container mt-40 mx-auto px-6 md:flex md:items-center md:justify-end gap-8 md:gap-12 relative z-10">
         <div className="flex-1 max-w-md md:ml-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl  mb-6">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               BUSINESS
             </span>
            
           </h2>
 
-          <ul className="space-y-4 text-lg md:text-xl  text-black">
+          <ul className="space-y-4 text-lg md:text-xl font-bold text-black">
             <li>• Chương trình đào tạo may đo theo yêu cầu</li>
             <li>• Tư vấn hệ thống quản trị nguồn lực</li>
             <li>• Coaching</li>

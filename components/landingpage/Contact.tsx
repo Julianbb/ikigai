@@ -10,46 +10,51 @@ export const Contact = () => {
           CONTACT
         </h3>
 
-        {/* 横向分布信息 */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8 sm:gap-0 text-center sm:text-left">
+        {/* ✅ 改成等宽网格布局 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center sm:text-left">
+          
           {/* 地址 */}
-          <div className="flex flex-col items-center sm:items-start gap-2">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col items-center sm:items-start gap-2 px-4">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <MapPin className="text-primary w-5 h-5" />
               <h4 className="font-semibold text-lg">Address</h4>
             </div>
-            <p>123 Street Name, City, Country</p>
+            <p className="break-words leading-relaxed">
+              Văn phòng 1, Tầng 9, Tòa nhà Pearl Plaza, số 561A Điện Biên Phủ, 
+              Phường Thạnh Mỹ Tây, TP Hồ Chí Minh, Việt Nam
+            </p>
           </div>
 
- {/* 工作时间 */}
-          <div className="flex flex-col items-center sm:items-start gap-2">
-            <div className="flex items-center gap-2">
+          {/* 工作时间 */}
+          <div className="flex flex-col items-center sm:items-start gap-2 px-4">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <Clock className="text-primary w-5 h-5" />
               <h4 className="font-semibold text-lg">Working Time</h4>
             </div>
-            <p>Monday - Friday: 8am - 5pm</p>
+            <p className="break-words leading-relaxed">
+              Monday - Saturday: 8am - 5pm
+            </p>
           </div>
 
           {/* 电话 */}
-          <div className="flex flex-col items-center sm:items-start gap-2">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col items-center sm:items-start gap-2 px-4">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <Phone className="text-primary w-5 h-5" />
               <h4 className="font-semibold text-lg">Call Us</h4>
             </div>
-            <p>+84 989 366 643</p>
+            <p className="break-words leading-relaxed">+84 989 366 643</p>
           </div>
 
           {/* Email */}
-          <div className="flex flex-col items-center sm:items-start gap-2">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col items-center sm:items-start gap-2 px-4">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <Mail className="text-primary w-5 h-5" />
               <h4 className="font-semibold text-lg">Email</h4>
             </div>
-            <p>info@example.com</p>
+            <p className="break-words leading-relaxed">
+              info.ikigaihr@gmail.com
+            </p>
           </div>
-
-         
-         
         </div>
       </div>
 

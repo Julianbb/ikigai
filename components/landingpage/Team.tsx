@@ -47,17 +47,21 @@ export const Team = () => {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 justify-center">
-        {/* 上方大卡 - 不改 */}
+        {/* 上方大卡 */}
         <div className="lg:col-span-2 flex justify-center">
           <Card className="flex flex-col justify-center items-center bg-transparent border-0 shadow-none max-w-5xl">
             <CardHeader className="flex flex-col justify-center items-center pb-1">
-              <Image
-                src={teamList[0].imageUrl}
-                alt={`${teamList[0].name} ${teamList[0].position}`}
-                width={250}
-                height={250}
-                className=" object-cover "
-              />
+              {/* ✅ 改成圆形头像 */}
+              <div className="w-[150px] h-[150px] rounded-full overflow-hidden flex justify-center items-center shadow-md">
+                <Image
+                  src={teamList[0].imageUrl}
+                  alt={`${teamList[0].name} ${teamList[0].position}`}
+                  width={150}
+                  height={150}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+
               <CardTitle className="text-center mt-4">
                 {teamList[0].name}
               </CardTitle>
@@ -72,44 +76,43 @@ export const Team = () => {
           </Card>
         </div>
 
+        {/* 下方两张卡 */}
         {teamList.slice(1).map(
-  ({ imageUrl, name, position, description }: TeamProps) => (
-    <div key={name} className="flex justify-center">
-      <Card className="flex flex-col sm:flex-row items-center bg-transparent border-0 shadow-none w-full max-w-[400px]">
-        {/* 左侧头像 */}
-        <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4 flex justify-center">
-          <div className="w-[90px] h-[90px] rounded-full overflow-hidden flex justify-center items-center shadow-md">
-            <Image
-              src={imageUrl}
-              alt={`${name} ${position}`}
-              width={90}
-              height={90}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
+          ({ imageUrl, name, position, description }: TeamProps) => (
+            <div key={name} className="flex justify-center">
+              <Card className="flex flex-col sm:flex-row items-center bg-transparent border-0 shadow-none w-full max-w-[400px]">
+                {/* 左侧头像 */}
+                <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-4 flex justify-center">
+                  <div className="w-[90px] h-[90px] rounded-full overflow-hidden flex justify-center items-center shadow-md">
+                    <Image
+                      src={imageUrl}
+                      alt={`${name} ${position}`}
+                      width={90}
+                      height={90}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
 
-        {/* 右侧文字部分 */}
-        <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-          <CardHeader className="p-0">
-            <CardTitle className="text-base font-semibold">
-              {name}
-            </CardTitle>
-            <CardDescription className="text-primary">
-              {position}
-            </CardDescription>
-          </CardHeader>
+                {/* 右侧文字部分 */}
+                <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                  <CardHeader className="p-0">
+                    <CardTitle className="text-base font-semibold">
+                      {name}
+                    </CardTitle>
+                    <CardDescription className="text-primary">
+                      {position}
+                    </CardDescription>
+                  </CardHeader>
 
-          {/* 描述 */}
-          <CardContent className="p-0 mt-3">
-            <p className="text-sm">{description}</p>
-          </CardContent>
-        </div>
-      </Card>
-    </div>
-  )
-)}
-
+                  <CardContent className="p-0 mt-3">
+                    <p className="text-sm">{description}</p>
+                  </CardContent>
+                </div>
+              </Card>
+            </div>
+          )
+        )}
       </div>
     </section>
   );
