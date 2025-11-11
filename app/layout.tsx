@@ -5,9 +5,9 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://strategy.julian3.vip'),
-  title: 'Chat Strategy',
-  description: 'Next.js chatbot template using the AI SDK.',
+  metadataBase: new URL('https://ikigaihr.com.vn'),
+  title: 'IKIGAI',
+  description: 'IKIGAI HR Consulting Services',
 };
 
 const geist = Geist({
