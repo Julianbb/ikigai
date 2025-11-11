@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ikigaihr.com.vn'),
   title: 'IKIGAI',
   description: 'IKIGAI HR Consulting Services',
+  icons: {
+    icon: '/icons/icon.png',
+  },
 };
 
 const geist = Geist({
